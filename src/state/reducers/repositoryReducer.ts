@@ -1,7 +1,22 @@
-import { RepositoryState, Action } from '../actions/index';
+import { Action } from '../actions/index';
 import { ActionType } from '../action-types';
 
-const reduer = (state: RepositoryState, action: Action): RepositoryState => {
+export interface RepositoryState {
+  data: string[];
+  loading: boolean;
+  error: string | null;
+}
+
+const initialState = {
+  loading: false,
+  error: null,
+  data: [],
+};
+
+const reduer = (
+  state: RepositoryState = initialState,
+  action: Action
+): RepositoryState => {
   switch (action.type) {
     case ActionType.SEARCH_REPOSITORY:
       return { loading: true, error: null, data: [] };
