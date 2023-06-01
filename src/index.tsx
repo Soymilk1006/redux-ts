@@ -12,7 +12,7 @@ root.render(
     <App />
   </React.StrictMode>
 );
-// new create branch
+// new create branch and fix another bug
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
